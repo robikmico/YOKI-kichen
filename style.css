@@ -1,0 +1,290 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(./image/yoki.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  
+  header {
+    background-color:blanchedalmond;
+    color: rgb(210, 27, 27);
+    font-family:Arial, Helvetica, sans-serif;
+    font-style:italic;
+    font-weight: 900;
+    text-align: center;
+    padding: 2.5em 0;
+  }
+  
+  header p {
+    margin: 0;
+  }
+  
+  nav {
+    overflow: hidden;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    float: left;
+  }
+  
+  nav ul li a {
+    color: rgb(169, 101, 101);
+    text-align: center;
+    padding: 14px 20px;
+  }
+  .robi{
+    color: #6d69c9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-style: italic;
+  }
+  
+  nav ul li a:hover {
+    
+  }
+
+  /*--yoki--*/
+
+.yoki{
+    margin: 50px;
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    color: #FFF;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+  }
+  .yoki::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:#ccf8eb;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  
+  
+  /* glow */
+  .yoki::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #FF0000, #FF7300, #FFFB00, #48FF00,
+      #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  
+  @keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+  }
+  
+  /* hover */
+  .yoki:hover::before {
+    opacity: 1;
+  }
+  
+  .yoki:active:after {
+    background: transparent;
+  }
+  
+  .yoki:active {
+    color: #000;
+    font-weight: bold;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+    background-color: rgb(214, 185, 185);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  section.robi{
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  section.robi button,
+  section.robi button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  section.robi button:hover,
+  section.robi button:hover {
+    background-color: #45a049;
+  }
+  #menu{
+    background-color: #b5d8d2;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .gallery img {
+    max-width: calc(25% - 10px);
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .gallery img {
+    max-width: calc(25% - 10px);
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position:relative;
+    clear: both;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  .modal-content,
+  #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from { transform: scale(0) }
+    to { transform: scale(1) }
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    nav ul li {
+        float: none;
+    }
+  
+    nav ul li a {
+        text-align: left;
+        padding: 10px;
+    }
+  
+    section {
+        margin-bottom: 10px;
+        padding: 15px;
+    }
+  
+    section#home button,
+    section#menu button {
+        width: 100%;
+        padding: 10px;
+    }
+  
+    .gallery img {
+        max-width: calc(50% - 10px);
+    }
+  }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoki Kitchen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Yoki Kitchen</h1>
+        <p>The best Eritrean food in Charlotte, NC</p>
+    </header>
+    <nav>
+        <ul>
+            <li class="yoki"><a href="About.html">About</a></li>
+            <li class="yoki"><a href="menu.html">Menu</a></li>
+            <li class="yoki"><a href="contact.html">Contact</a></li>
+            <li class="yoki"><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="robi">
+            <h2>Welcome to Yoki Kitchen</h2>
+            <p>Experience the authentic flavors of Eritrean cuisine.</p>
+            <button onclick="window.location.href='#order'">Order Now</button>
+        </section>
+        <section class="robi">
+            <h2>About Us</h2>
+            <p>Yoki Kitchen is a family-owned restaurant offering traditional Eritrean dishes made with love and the finest ingredients.</p>
+        </section>
+        <section class="robi">
+            <h2>Our Menu</h2>
+            <p>Explore our delicious menu featuring classic Eritrean dishes such as injera, tsebhi, and more.</p>
+            <button onclick="window.location.href='#order'">Order Now</button>
+        </section>
+        <section class="robi">
+            <h2>Gallery</h2>
+            <p>Take a look at some of our mouth-watering dishes and cozy restaurant ambiance.</p>
+            <div class="gallery">
+                <!-- Add images here -->
+                <img src="./image/yoki.jpg" alt="special avacado salad">
+                <img src="./image/yoki1.jpg" alt="egg veggie with side of brocli">
+                <img src="./image/yoki2.jpg" alt="kicha fitfit">
+                <img src="./image/yoki3.jpg" alt="avacado salad">
+                <img src="./image/yoki4.jpg" alt="chiken casadia with juice">
+                <img src="./image/yoki5.jpg" alt="beef and pototo soup">
+            </div>
+        </section>
+        <section id="order">
+            <h2>Order Now</h2>
+            <p>Call us at <a href="tel:9808292597">980-829-2597</a> to place your order!</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions? Reach out to us!</p>
+            <p>Phone: <a href="tel:9808292597">980-829-2597</a></p>
+            <p>Address: Charlotte, NC</p>
+        </section>
+    </main>
+    <footer id="footer">
+        <p>&copy; 2024 Yoki Kitchen. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal for gallery images -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
